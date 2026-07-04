@@ -1,0 +1,823 @@
+<title>혼티오 문장집 · OPIC 핵심문장 214</title>
+<style>
+  :root{
+    --paper:#FBF6EC; --surface:#FFFFFF; --surface-2:#FFFDF8;
+    --ink:#2B2115; --ink-soft:#8A775A; --ink-faint:#B7A585;
+    --honey:#EAA221; --honey-deep:#B9760A; --honey-wash:#FCEEC8; --honey-line:#F2D99A;
+    --good:#3F8F5B; --good-wash:#E4F1E7;
+    --line:#EFE3CB; --line-soft:#F5EEDD;
+    --shadow:0 1px 2px rgba(74,52,18,.05), 0 8px 24px -12px rgba(120,84,24,.16);
+    --shadow-lg:0 12px 40px -16px rgba(120,84,24,.30);
+    --radius:18px; --radius-sm:12px;
+    --f-sans:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --f-num:"SF Mono","SFMono-Regular",ui-monospace,"Cascadia Mono",Menlo,monospace;
+    --maxw:680px;
+  }
+  [data-theme="dark"]{
+    --paper:#191510; --surface:#231D15; --surface-2:#2A2318;
+    --ink:#F3EBDB; --ink-soft:#B0A183; --ink-faint:#77694F;
+    --honey:#F5B534; --honey-deep:#E8A013; --honey-wash:#3A2C13; --honey-line:#4C3A1A;
+    --good:#71BB8C; --good-wash:#22301F;
+    --line:#33291A; --line-soft:#2A2217;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 14px 44px -18px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box;margin:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--paper); color:var(--ink); font-family:var(--f-sans);
+    line-height:1.5; letter-spacing:-0.01em; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    background-image:
+      radial-gradient(120% 90% at 50% -10%, var(--honey-wash) 0%, transparent 46%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='96' viewBox='0 0 56 96'%3E%3Cg fill='none' stroke='%23d9ad4e' stroke-opacity='0.06' stroke-width='1.4'%3E%3Cpath d='M28 0l14 8v16l-14 8-14-8V8z'/%3E%3Cpath d='M0 48l14 8v16L0 80m56-32l-14 8v16l14 8M28 48l14 8v16l-14 8-14-8V56z'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment:fixed;
+  }
+  [data-theme="dark"] body{
+    background-image:
+      radial-gradient(120% 90% at 50% -10%, rgba(245,181,52,.08) 0%, transparent 46%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='96' viewBox='0 0 56 96'%3E%3Cg fill='none' stroke='%23f5b534' stroke-opacity='0.05' stroke-width='1.4'%3E%3Cpath d='M28 0l14 8v16l-14 8-14-8V8z'/%3E%3Cpath d='M0 48l14 8v16L0 80m56-32l-14 8v16l14 8M28 48l14 8v16l-14 8-14-8V56z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer;letter-spacing:inherit}
+  svg{display:block}
+  ::selection{background:var(--honey-wash)}
+  :focus-visible{outline:2.5px solid var(--honey-deep);outline-offset:2px;border-radius:6px}
+  .tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+  /* ---- Top bar ---- */
+  .topbar{
+    position:sticky;top:0;z-index:40;
+    background:color-mix(in srgb,var(--paper) 82%,transparent);
+    backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .topbar-in{max-width:var(--maxw);margin:0 auto;height:56px;display:flex;align-items:center;gap:6px;padding:0 12px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:15px;letter-spacing:-.02em;margin-right:auto;min-width:0}
+  .brand button{display:flex;align-items:center;gap:9px}
+  .brand .mark{width:28px;height:28px;flex:none}
+  .brand .sub{color:var(--ink-soft);font-weight:600;font-size:11px;letter-spacing:.04em}
+  .brand b{color:var(--honey-deep)}
+  .iconbtn{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:var(--ink-soft);transition:background .15s,color .15s}
+  .iconbtn:hover{background:var(--honey-wash);color:var(--honey-deep)}
+  .iconbtn svg{width:20px;height:20px}
+
+  main{max-width:var(--maxw);margin:0 auto;padding:0 16px 88px}
+  .view{animation:rise .34s cubic-bezier(.2,.7,.2,1)}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* ---- Hero ---- */
+  .hero{padding:26px 4px 8px}
+  .hero-eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--honey-deep)}
+  .hero h1{font-size:29px;line-height:1.18;font-weight:850;letter-spacing:-.035em;margin:8px 0 4px;text-wrap:balance}
+  .hero p{color:var(--ink-soft);font-size:14px;max-width:42ch}
+
+  /* ---- Section head ---- */
+  .sec{display:flex;align-items:center;gap:10px;margin:26px 4px 12px}
+  .sec h2{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+  .sec .rule{height:1px;background:var(--line);flex:1}
+
+  /* ---- Resume card ---- */
+  .resume{display:flex;align-items:center;gap:14px;padding:15px 16px;border-radius:var(--radius);
+    background:linear-gradient(150deg,var(--honey-deep),#8a5a08);color:#fff;box-shadow:var(--shadow-lg);
+    text-align:left;width:100%;transition:transform .12s}
+  .resume:active{transform:scale(.985)}
+  .resume .rz-hex{flex:none}
+  .resume .rz-t{flex:1;min-width:0}
+  .resume .rz-t .k{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+  .resume .rz-t .n{font-size:17px;font-weight:800;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .resume .rz-arrow{opacity:.85}
+
+  /* ---- Day list ---- */
+  .daylist{display:flex;flex-direction:column;gap:11px}
+  .daycard{display:flex;align-items:center;gap:14px;text-align:left;width:100%;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px;box-shadow:var(--shadow);transition:transform .13s,border-color .13s,box-shadow .13s}
+  .daycard:hover{border-color:var(--honey-line);box-shadow:var(--shadow-lg)}
+  .daycard:active{transform:scale(.988)}
+  .hex{position:relative;width:52px;height:58px;flex:none;display:grid;place-items:center}
+  .hex svg{position:absolute;inset:0;width:100%;height:100%}
+  .hex .dn{position:relative;font-family:var(--f-num);font-weight:700;font-size:19px;letter-spacing:-.05em;color:var(--honey-deep)}
+  .dc-body{flex:1;min-width:0}
+  .dc-body .th{font-size:16.5px;font-weight:800;letter-spacing:-.02em;line-height:1.25}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .tag{font-size:11px;font-weight:700;color:var(--ink-soft);background:var(--honey-wash);
+    padding:2.5px 8px;border-radius:99px;letter-spacing:.01em}
+  .dc-meta{display:flex;align-items:center;gap:8px;margin-top:9px}
+  .warm{font-size:10.5px;font-weight:800;letter-spacing:.06em;color:var(--honey-deep);background:var(--honey-wash);padding:2px 7px;border-radius:99px;text-transform:uppercase}
+
+  /* ---- Day view ---- */
+  .dhead{padding:20px 2px 6px}
+  .backbtn{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--ink-soft);padding:6px 2px;margin-bottom:8px}
+  .backbtn:hover{color:var(--honey-deep)}
+  .dhead-row{display:flex;align-items:center;gap:15px}
+  .dhead .hex{width:60px;height:67px}
+  .dhead .hex .dn{font-size:22px}
+  .dhead h1{font-size:24px;font-weight:850;letter-spacing:-.035em;line-height:1.15;text-wrap:balance}
+  .dhead .dsub{color:var(--ink-soft);font-size:12.5px;font-weight:700;margin-top:3px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+
+  /* ---- Mode switch (segmented) ---- */
+  .seg{display:flex;gap:4px;padding:4px;background:var(--surface);border:1px solid var(--line);
+    border-radius:13px;margin:16px 0 4px;box-shadow:var(--shadow)}
+  .seg button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 8px;
+    border-radius:9px;font-size:13px;font-weight:800;color:var(--ink-soft);transition:.15s}
+  .seg button svg{width:16px;height:16px}
+  .seg button[aria-pressed="true"]{background:var(--honey);color:#3a2708;box-shadow:0 2px 8px -2px rgba(185,118,10,.5)}
+  [data-theme="dark"] .seg button[aria-pressed="true"]{color:#2a1d06}
+
+  /* ---- Sentence cards ---- */
+  .slist{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+  .scard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 15px 13px;box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+  .scard.learned{border-color:color-mix(in srgb,var(--good) 40%,var(--line));background:linear-gradient(180deg,var(--good-wash),var(--surface) 60%)}
+  .scard.flash{animation:flash 1.4s ease}
+  @keyframes flash{0%,100%{box-shadow:var(--shadow)}18%{box-shadow:0 0 0 3px var(--honey),var(--shadow-lg)}}
+  .s-top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .s-num{font-family:var(--f-num);font-size:12px;font-weight:700;color:var(--honey-deep);
+    background:var(--honey-wash);border-radius:7px;padding:3px 8px;letter-spacing:0;flex:none}
+  .s-num.p{color:var(--ink-soft);background:var(--line-soft)}
+  .s-spacer{flex:1}
+  .droptog{display:flex;align-items:center;gap:6px;flex:none;padding:4px 9px 4px 6px;border-radius:99px;
+    font-size:11.5px;font-weight:800;color:var(--ink-faint);transition:.15s}
+  .droptog:hover{background:var(--honey-wash);color:var(--honey-deep)}
+  .droptog .drop{width:19px;height:19px;transition:transform .25s}
+  .scard.learned .droptog{color:var(--good)}
+  .scard.learned .droptog:hover{background:var(--good-wash)}
+  .droptog.pop .drop{animation:pop .4s cubic-bezier(.2,.8,.3,1.4)}
+  @keyframes pop{0%{transform:scale(.4)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+  .s-kr{font-size:16.5px;font-weight:700;letter-spacing:-.02em;line-height:1.5;color:var(--ink)}
+  .s-en{position:relative;font-size:14.5px;color:var(--ink-soft);line-height:1.5;margin-top:7px;font-weight:500}
+  .s-en .txt{transition:filter .28s,opacity .28s}
+  .scard.hide .s-en .txt{filter:blur(6px);opacity:.5;user-select:none}
+  .s-en .peek{position:absolute;inset:-4px -6px;display:none;align-items:center;justify-content:center;gap:6px;
+    font-size:12px;font-weight:800;color:var(--honey-deep);background:color-mix(in srgb,var(--surface) 64%,transparent);
+    border-radius:10px;letter-spacing:.02em}
+  .scard.hide .s-en .peek{display:flex}
+  .scard.hide.revealed .s-en .txt{filter:none;opacity:1;user-select:auto}
+  .scard.hide.revealed .s-en .peek{display:none}
+  .s-en .peek svg{width:14px;height:14px}
+
+  /* ---- Practice ---- */
+  .practice{margin-top:22px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .practice > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:15px 16px;font-weight:800;font-size:15px}
+  .practice > summary::-webkit-details-marker{display:none}
+  .practice > summary .pi{width:30px;height:30px;border-radius:9px;background:var(--honey-wash);color:var(--honey-deep);display:grid;place-items:center;flex:none}
+  .practice > summary .pi svg{width:17px;height:17px}
+  .practice > summary .cnt{margin-left:auto;font-size:12px;font-weight:800;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+  .practice > summary .chev{transition:transform .25s;color:var(--ink-faint)}
+  .practice[open] > summary .chev{transform:rotate(180deg)}
+  .practice > summary .chev svg{width:18px;height:18px}
+  .plist{padding:2px 14px 14px;display:flex;flex-direction:column;gap:2px}
+  .pitem{padding:13px 2px;border-top:1px solid var(--line-soft)}
+  .pitem:first-child{border-top:0}
+  .pq{font-size:14.5px;font-weight:700;line-height:1.5;letter-spacing:-.01em}
+  .pq .cue{color:var(--honey);font-weight:800;margin:0 1px}
+  .pa{display:flex;gap:8px;margin-top:9px;align-items:flex-start;cursor:pointer}
+  .pa .ar{color:var(--honey-deep);font-weight:800;flex:none;margin-top:1px}
+  .pa .en{position:relative;font-size:14px;color:var(--good);font-weight:600;line-height:1.5;flex:1}
+  .pa .en .txt{transition:filter .28s,opacity .28s}
+  .pitem.hidden .pa .en .txt{filter:blur(5px);opacity:.5;user-select:none}
+  .pitem.hidden .pa .en::after{content:"탭하여 정답 보기";position:absolute;inset:0;display:flex;align-items:center;
+    font-size:11.5px;font-weight:800;color:var(--honey-deep);letter-spacing:.02em}
+  .pitem.hidden.on .pa .en .txt{filter:none;opacity:1;user-select:auto}
+  .pitem.hidden.on .pa .en::after{display:none}
+
+  /* ---- Verb table ---- */
+  .vtable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);margin-top:14px}
+  table.vtable{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+  .vtable th,.vtable td{text-align:left;padding:10px 14px;font-size:14px;border-bottom:1px solid var(--line-soft);white-space:nowrap}
+  .vtable th{position:sticky;top:56px;background:var(--honey-wash);color:var(--honey-deep);font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;z-index:1}
+  .vtable tbody tr:nth-child(even){background:var(--surface-2)}
+  .vtable td:first-child{font-weight:800;color:var(--ink)}
+  .vtable td:not(:first-child){color:var(--ink-soft);font-weight:600}
+  .vtable tr.same td:not(:first-child){color:var(--honey-deep)}
+  .vnote{font-size:12px;color:var(--ink-faint);margin:12px 4px 0;font-weight:600}
+
+  /* ---- Search overlay ---- */
+  .search{position:fixed;inset:0;z-index:60;display:none;flex-direction:column;
+    background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .search.open{display:flex;animation:rise .2s ease}
+  .search-bar{max-width:var(--maxw);width:100%;margin:0 auto;padding:14px 14px 10px;display:flex;align-items:center;gap:10px}
+  .search-inp{flex:1;display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);
+    border-radius:13px;padding:12px 14px;box-shadow:var(--shadow)}
+  .search-inp svg{width:19px;height:19px;color:var(--ink-faint);flex:none}
+  .search-inp input{flex:1;border:0;background:none;font-family:inherit;font-size:16px;font-weight:600;color:var(--ink);outline:none;min-width:0}
+  .search-cancel{font-size:14px;font-weight:800;color:var(--honey-deep);padding:6px 4px;flex:none}
+  .search-res{max-width:var(--maxw);width:100%;margin:0 auto;overflow-y:auto;padding:4px 14px 40px;flex:1}
+  .sr-empty{text-align:center;color:var(--ink-faint);font-weight:600;font-size:14px;padding:60px 20px}
+  .sr-empty svg{width:40px;height:40px;margin:0 auto 12px;color:var(--honey-line)}
+  .sr-item{display:block;width:100%;text-align:left;padding:13px 14px;border-radius:var(--radius-sm);
+    background:var(--surface);border:1px solid var(--line);margin-bottom:8px;box-shadow:var(--shadow);transition:border-color .12s}
+  .sr-item:hover{border-color:var(--honey-line)}
+  .sr-item .meta{font-size:11px;font-weight:800;color:var(--honey-deep);letter-spacing:.04em;margin-bottom:5px;text-transform:uppercase}
+  .sr-item .kr{font-size:14.5px;font-weight:700;line-height:1.45}
+  .sr-item .en{font-size:13px;color:var(--ink-soft);line-height:1.45;margin-top:3px}
+  .sr-item mark{background:var(--honey-wash);color:var(--honey-deep);border-radius:3px;padding:0 1px;font-weight:800}
+
+  footer{max-width:var(--maxw);margin:0 auto;padding:24px 20px 40px;text-align:center;color:var(--ink-faint);font-size:11.5px;font-weight:600;line-height:1.7}
+  footer b{color:var(--ink-soft)}
+
+  @media(min-width:560px){
+    .hero h1{font-size:33px}
+    .dhead h1{font-size:27px}
+    .tags .tag{font-size:11.5px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.001s!important;transition-duration:.001s!important}
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <button onclick="go('#/')" aria-label="홈으로">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2l12 7v14l-12 7L4 23V9z" fill="var(--honey)"/>
+          <path d="M16 2l12 7v14l-12 7L4 23V9z" stroke="var(--honey-deep)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M11 19c0-3 2.2-5 5-5s5 2 5 5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="11.5" r="1.9" fill="#fff"/>
+        </svg>
+        <span>혼티오 문장집<br><span class="sub">OPIC 핵심문장 <b>214</b></span></span>
+      </button>
+    </div>
+    <button class="iconbtn" onclick="openSearch()" aria-label="문장 검색">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
+    </button>
+    <button class="iconbtn" id="themeBtn" onclick="toggleTheme()" aria-label="화면 밝기 전환"></button>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<div class="search" id="search">
+  <div class="search-bar">
+    <div class="search-inp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
+      <input id="searchInp" type="search" placeholder="한글 또는 영어로 문장 검색…" autocomplete="off" spellcheck="false" oninput="runSearch(this.value)">
+    </div>
+    <button class="search-cancel" onclick="closeSearch()">취소</button>
+  </div>
+  <div class="search-res" id="searchRes"></div>
+</div>
+
+<script>
+const DATA = { days:[
+{n:1,theme:`자기소개 & 외식`,topics:[`자기소개`,`외식`,`전공`],s:[],p:[
+[`저는 활발한 사람입니다/ 긍정적인 자세를 가지고 있는`,`I'm an outgoing person with a positive attitude.`],
+[`어렸을 때부터/ 저는 자동차들과 로봇들에 관심이 많았습니다`,`Since I was a child, I've been interested in cars and robots.`],
+[`제가 4학년 때/ 저는 인턴으로 일했습니다// 전자 회사에서`,`When I was a senior, I worked as an intern at an electronics company.`],
+[`전문지식을 얻기 위해서/ 저는 많은 수업들을 들었습니다// 마케팅에 연관 된`,`In order to gain professional knowledge, I took a lot of classes related to marketing.`],
+[`저는 주중에 공부하느라 바빠요/ so 저는 주로 외식을 해요// 토요일에`,`I'm busy studying on weekdays, so I usually eat out on weekends.`]]},
+{n:2,theme:`집 묘사 & 이웃`,topics:[`집`,`방`,`동네`],s:[
+[1,`우리 가족은 일산에 있는 아파트 9층에 살아요.`,`My family lives on the ninth floor of an apartment building in Il-San.`],
+[2,`일산은 서울 근처에 위치한 주거지역입니다.`,`Ilsan is a residential area located near Seoul.`],
+[3,`부모님 방에는 작은 화장실과 붙박이장이 있습니다.`,`In my parents room, there is a small bathroom and a built-in closet.`],
+[4,`어머니가 부지런 하셔서 모든 것이 잘 정돈되어 있습니다.`,`Everything there is well arranged because my mother is an organized person.`],
+[5,`제 방은 우리 집 구석에 위치 해 있습니다.`,`My room is located in the corner of my apartment.`],
+[6,`제 방은 크지는 않지만 아담합니다.`,`My room is not big but it's very cozy.`],
+[7,`우리는 우리 아파트로 부터 동네의 멋진 경치를 가지고 있어요`,`We have a nice view of the neighborhood from our apartment.`],
+[8,`우리는 최근에 아파트의 인테리어를 개조했어요.`,`We recently renovated the interior of our apartment.`],
+[9,`저희 집은 시내에서 가까워요.`,`My apartment is close to the downtown area.`],
+[10,`거실은 예쁜 장식품들로 장식되어 있어요.`,`The living room is decorated with pretty ornaments.`],
+[11,`저는 제 방에서 시간을 많이 보내기 때문에 깨끗하게 잘 유지하려고 항상 노력합니다.`,`Because I spend a lot of time in my bedroom, I always try to keep it clean and in good condition.`],
+[12,`거기까지는 걸어서 10분 걸립니다.`,`It only takes 10 minutes to get there on foot.`],
+[13,`우리 아파트 단지에는 작은 공원이 있어요.`,`There is a small park in my apartment complex.`],
+[14,`우리 동네는 조용하고 안전해서 살기 좋아요.`,`My neighborhood is quiet and safe, so it is a great place to live.`]],p:[
+[`나는 아파트 10층에 삽니다/ 일산에 있는`,`I live on the 10th floor of an apartment in Ilsan.`],
+[`내가 걸어 들어오면/ 너는 거실을 볼 수 있어요`,`When you walk in, you can see a living room.`],
+[`그것이 큰 창문을 가지고 있기 때문에/ 그것은 매우 밝아요`,`Since it has a large window, it is very bright.`],
+[`그것은 단지 10분밖에 안 걸려요/ 거기 가는 데에/ 걸어서`,`It only takes 10 minutes to get there on foot.`],
+[`학교 갈 때/ 저는 종종 그녀를 우연히 만나요// 엘리베이터 안에서`,`When I go to school, I often run into her in the elevator.`],
+[`엠파이어스테이트 빌딩에 가 보았나요?`,`Have you ever been to the Empire State Building?`]]},
+{n:3,theme:`쇼핑`,topics:[`백화점`,`시장`,`환불`],s:[
+[15,`그 쇼핑몰은 지금 큰 세일중 이에요.`,`The shopping mall is having a big sale.`],
+[16,`나는 롯데백화점서 쇼핑하는 것을 좋아합니다. 그들은 다양한 상품을 가지고 있습니다.`,`I like shopping at Lotte Department Store. They have a wide selection of products.`],
+[17,`저는 현대 백화점에 가는 것을 좋아합니다. 그 곳은 우리 집 근처에 위치해 있고, 넓은 주차장을 가지고 있어요`,`I like to go to Hyundai department store because it is located near my place and it has a spacious parking lot.`],
+[18,`밤 시장에서 저는 양질의 옷을 싸게 살 수 있습니다.`,`At a night market, I can get great deals on quality clothes.`],
+[19,`동대문 시장에서, 당신은 옷을 합리적인 가격에 구입할 수 있어요.`,`In Dongdaemun market, you can buy clothes at a reasonable price.`],
+[20,`저는 쇼핑을 좋아하지 않습니다.`,`I'm not a big fan of shopping.`],
+[21,`그것은 세일이었음에 틀림없어요.`,`It must've been on sale.`],
+[22,`제가 그 셔츠를 입어보았을 때, 그것은 저에게 너무 잘 어울렸어요.`,`When I tried on the shirt, it looked great on me.`],
+[23,`저는 전액 환불을 원합니다.`,`I'd like to get a full refund.`],
+[24,`저는 가방 하나를 충동적으로 구입했습니다.`,`I bought a bag on impulse.`],
+[25,`저는 그 가구를 할부로 구입했습니다.`,`I bought the furniture in installments.`],
+[26,`제가 코스트코에서 가장 좋아하는 점은 물건을 대량으로 구매할 수 있다는 점입니다.`,`The thing I like the most about Costco is that I can buy products in bulk.`],
+[27,`그 점원들은 항상 따뜻하고 다정해요.`,`The clerks are always warm and friendly.`],
+[28,`그들은 양질의 서비스를 제공합니다.`,`They provide quality service.`],
+[29,`저는 물건을 구입하기 전에 항상 가격을 비교합니다.`,`I always compare prices before making a purchase.`],
+[30,`제 생각에 바가지를 쓴 것 같아요.`,`I think I got ripped off.`]],p:[
+[`나는 또한 좋아한다/ 활기찬 분위기를/// 그곳의`,`I also like the lively atmosphere there.`],
+[`나는 생각 한다/ 쇼핑은 좋은 방법이라고// 내 스트레스를 해소하는`,`I think shopping is a great way to relieve my stress.`],
+[`나는 주로 쇼핑을 간다/ 2주에 한 번`,`I usually go shopping once every two weeks.`],
+[`그 백화점은 깨끗하고 넓다// so 나는 기분이 유쾌하다// 쇼핑할 때`,`The department store is clean and spacious so I feel pleased when shopping.`],
+[`직원들은 친절하다// so 나는 항상 좋은 느낌을 받는다// 내가 그곳을 쇼핑할 때`,`The clerks are friendly so I always get a good impression when I shop there.`],
+[`나는 하나의 잊을 수 없는 경험이 있다/ 그것은 발생했다// 작년에`,`I have one unforgettable experience that happened last year.`],
+[`한국 사람들은 그들의 옷을(outfits) 선택한다// 그 상황(occasion)에 따라`,`Korean people choose their outfits depending on the occasion.`],
+[`그것은 그들의 일의 능률을 향상 시킬 수 있다`,`It can improve their work efficiency.`]]},
+{n:4,theme:`여행`,topics:[`휴가`,`관광`,`해외`],s:[
+[31,`저는 휴가 때 혼자서 시간을 보내는 것을 좋아합니다.`,`I like to spend time by myself when I am on vacation.`],
+[32,`집에 있는 것은 저에게 휴식을 취하고 재충전하는 멋진 기회를 줍니다.`,`Being at home gives me a great opportunity to relax and recharge my batteries.`],
+[33,`저는 보통 휴가 때 밀린 잠을 잡니다.`,`When on vacation, I usually catch up on some sleep.`],
+[34,`저는 처음으로 계획을 세웁니다.`,`I usually make a plan first.`],
+[35,`제 여행을 연기해야 했어요.`,`I had to put off my trip.`],
+[36,`한국의 다른 지역들과 다르게, 그곳에는 많은 야자수가 있어서 분위기가 이국적입니다.`,`Unlike other regions in Korea, there are many palm trees and the atmosphere is exotic.`],
+[37,`그 장소는 방문할만한 가치가 있습니다.`,`The place is worth visiting.`],
+[38,`해외 여행할 때, 저는 관광을 가는 것을 좋아합니다.`,`When I travel abroad, I like to go sightseeing.`],
+[39,`몇몇 사람들은 쇼핑을 가서 그 나라의 전통 기념품을 사는 것을 좋아합니다.`,`Some people like to go shopping and buy traditional souvenirs.`],
+[40,`여행은 제 시야를 넓어지게 해 줍니다.`,`Traveling enables me to broaden my horizons.`],
+[41,`그 곳은 산에 둘러싸여 있기 때문에 경치가 너무 멋져요.`,`The scenery is great there since it is surrounded by mountains.`],
+[42,`모레 휴가를 떠날 계획입니다.`,`I plan to go on vacation the day after tomorrow.`],
+[43,`경주에는 오래된 역사 유적들이나 지형들이 많이 남아있습니다.`,`There are many landmarks and remains of ancient buildings in Gyeongju.`],
+[44,`저는 하늘에 있는 아름다운 별들을 본 것을 생생하게 기억합니다.`,`I vividly remember looking at the beautiful stars in the sky.`],
+[45,`저는 제 카메라를 꼭 가져갑니다.`,`I make sure to bring my camera.`],
+[46,`여행 중에 우리는 바다에서 수영을 했고 해변에서 휴식을 취했습니다.`,`During the trip, we swam in the sea and relaxed on the beach.`],
+[47,`불행하게도, 저는 공항에 늦게 도착했고 비행기를 놓쳤습니다.`,`Unfortunately, I arrived late at the airport and missed my flight.`]],p:[
+[`그것은 두 번째로 가장 큰 도시이다/ 한국에서`,`It is the second-largest city in Korea.`],
+[`바다는 맑고 파랗다.`,`The sea is clear and blue.`],
+[`거기에는 많은 아름다운 카페들이 있다/ 해변을 따라서 (along)`,`There are many cafes along the beach.`],
+[`너는 다양한 종류의 해산물을 먹을 수 있다/ 합리적인 가격으로 (at a ~ price)`,`You can eat a variety of seafood at a reasonable price.`],
+[`국제 영화제가 열린다/ 부산에서// 매 년`,`An international film festival is held in Busan every year.`],
+[`속초는 위치해 있다/ 동해안 (the east coast) 위에/ 우리나라의`,`Sokcho is located on the east coast of my country.`],
+[`거기에서/ 나는 그들의 문화와 전통을 이해할 수 있다`,`There, I can understand their culture and tradition.`],
+[`때로는/ 나는 내 사진을 올린다// 내 블로그나 페이스북 위에`,`Sometimes, I upload my pictures on my blog or Facebook.`],
+[`그것은 약간 잔인하지만 but 매우 스릴이 있다`,`It is a bit cruel but very thrilling.`],
+[`환타지 소설들은 돕는다/ 내 상상력 향상을`,`Fantasy novels help enhance my imagination.`]]},
+{n:5,theme:`학교 · 직장 · 테크놀로지`,topics:[`캠퍼스`,`사무실`,`기술`],s:[
+[48,`학교에서, 우리는 최신 기술을 사용합니다.`,`At school, we use state-of-the-art technology.`],
+[49,`왼쪽에는 도서관이 있어요.`,`There is a library on your left.`],
+[50,`도서관 건너편에는 학생회관이 있습니다. 그 곳에서 동아리 회원들이 모이고 활동에 참여합니다.`,`Across from the library, there is a student center where club members gather and participate in activities.`],
+[51,`캠퍼스 중앙에는 큰 운동장이 있습니다.`,`There is a large playground in the center of the campus.`],
+[52,`최근에 도서관은 개조공사를 했습니다.`,`Recently, the library was remodeled.`],
+[53,`도서관 옆에는 학생식당이 있습니다.`,`There is a school cafeteria next to the school library.`],
+[54,`저는 캠퍼스의 많은 곳들을 방문했습니다.`,`I visited many places on campus.`],
+[55,`강의실에 가기 위해 저는 가파른 언덕을 올라가야 했습니다.`,`In order to get to my classroom, I had to walk up a steep hill.`],
+[56,`전공에서, 우리는 비즈니스에 연관된 실용적인 지식을 배웁니다.`,`In my major, we learn practical knowledge related to business.`],
+[57,`이러한 활동들은 영어 실력을 효과적으로 향상시켜 줍니다.`,`These activities help improve my English skills effectively.`],
+[58,`수업에서, 우리는 때로 사회적인 이슈를 토론합니다.`,`In class, we sometimes discuss social issues.`],
+[59,`저는 경제 전문가가 되어 우리 사회의 경제발전에 공헌하고 싶어요.`,`I'd like to be an economic expert who can contribute to the economic development of our society.`],
+[60,`모든 수업이 전자 출석 시스템을 사용합니다.`,`All of my classes use an electronic attendance system.`],
+[61,`사무실 뒤에는 사무용품들이 많이 있습니다.`,`At the back of the office, there are many office supplies.`],
+[62,`한쪽 구석에는 복사기, 프린터, 팩스와 같은 사무기기가 있습니다.`,`In the corner of the office, there are several office machines such as a photocopier, a printer and a fax machine.`],
+[63,`사무실에 직원 휴게실이 있어서 그곳에서 휴식을 취할 수 있어요.`,`In our office, there is an employee lounge where we can relax and take a break.`],
+[64,`요즘 기술이 너무 빠르게 변화해서 기술 발전 속도를 따라가기 어렵습니다.`,`These days technology changes so fast that it is difficult to keep up with the technology advancements.`],
+[65,`우리 회사는 양질의 전자제품 생산으로 유명합니다.`,`My company is known for producing quality electronic goods.`],
+[66,`우리의 핸드폰과 티비는 고객들에게 매우 인기가 많아요.`,`Our cellular phones and TVs are very popular with customers.`],
+[67,`저는 서류들을 복사하기 위해서 복사기를 사용합니다.`,`I use a photocopier to make copies of documents.`],
+[68,`우리는 자주 초과근무를 하도록 요구받습니다.`,`We are required to work overtime often.`],
+[69,`과학기술은 지난 몇 년간 급속도로 발전해 왔습니다.`,`Technology has rapidly developed in the last few years.`]],p:[
+[`그것이 시내 안에 위치해 있기 때문에/ 나는 친구와 어울려 놀 수 있다/ 멋진 술집이나 식당에서// 수업 후에`,`Since it is located in the downtown area, I can hang out with friends in a nice pub or a restaurant after classes.`],
+[`매일/ 나는 거기에 간다/ 점심식사 후에/ and 개천을 따라 걷는다`,`Every day, I go there after lunch and walk along the stream.`],
+[`우리 회사는 설립 되었다/ 1930년에`,`My company was established in 1930.`],
+[`나는 대학교에 갔다/ 오리엔테이션 프로그램에 참여하려고`,`I went to the university to participate in an orientation program.`],
+[`건물들이 오래되고 낡아 보였다/// 나는 매우 실망했다`,`The buildings looked old and shabby. I was very disappointed.`],
+[`아침에/ 회사의 CEO가 소개했다// 회사의 역사와 제품들을`,`In the morning, the CEO of the company introduced the company's history, products and the executives of the company.`],
+[`나는 컴퓨터를 사용한다/ 가장 빈번하게`,`I use a computer most frequently.`],
+[`나는 생각 한다/ 컴퓨터가 내 학교생활을 좀 더 편리하고 재미있게 만들어 주었다고(현재완료)`,`I think a computer has made my school life more convenient and fun.`],
+[`나는 내 서류들을 깔끔하게 정리할 수 있다`,`I can organize my documents neatly.`],
+[`일 끝나면 당신은 주로 무엇을 하나요?`,`What do you usually do after finishing work?`]]},
+{n:6,theme:`영화`,topics:[`영화관`,`배우`,`장르`],s:[
+[70,`아바타는 지난주에 개봉되었습니다.`,`The movie 'Avatar' was released last week.`],
+[71,`그 영화관은 큰 스크린과 양질의 사운드 시스템을 갖추고 있습니다.`,`The movie theater has a big screen and a quality sound system.`],
+[72,`제 멤버십 카드로 저는 티켓가격의 20%를 할인 받을 수 있습니다.`,`I can get a 20% discount on my ticket with my membership card.`],
+[73,`그 영화관이 편리하게 위치해 있기 때문에 지하철이나 버스로 도달하기 쉬워요.`,`Since the movie theater is conveniently located, it is easy to get to by subway or bus.`],
+[74,`그 영화관은 너무 넓어서 동시에 300명 이상을 수용할 수 있습니다.`,`The theater is so spacious that it can accommodate more than 300 people at the same time.`],
+[75,`그 영화관은 제 고등학교 시절을 상기시켜 줍니다.`,`The movie theatre reminds me of my high school days.`],
+[76,`저는 영화보기 전에 항상 인터넷으로 리뷰를 읽어요.`,`I always read reviews on the Internet before watching a movie.`],
+[77,`저는 인터넷으로 표를 예약하고 그것들을 극장에서 픽업합니다.`,`I reserve tickets online and pick them up at the theater.`],
+[78,`제 친구와 저는 영화에 대한 취향이 같습니다.`,`My friend and I have the same taste in movies.`],
+[79,`영화를 보는 것은 저를 현실에서 벗어날 수 있게 해줍니다.`,`Watching movies allows me to escape from real life.`],
+[80,`저는 다큐멘터리 영화를 좋아합니다. 정보도 많고 교육적이죠.`,`I like documentary movies. They are very informative and educational.`],
+[81,`그 영화의 놀라운 결말은 절 흥분시켰어요.`,`The movie's surprising ending really excited me.`],
+[82,`저는 송강호를 좋아합니다. 그의 연기는 최고입니다.`,`I like Song Kangho. His acting is superb.`],
+[83,`영화에서 그의 연기는 인상적이었죠.`,`His acting was very impressive in the film.`],
+[84,`그는 영화'쉬리'에 출연했습니다.`,`He was in the movie Shiri.`],
+[85,`그는 영화 '타이타닉'에서 배우로서 멋진 데뷔를 했어요.`,`He made a great debut as an actor in the movie 'Titanic'`],
+[86,`그는 상을 많이 받았습니다.`,`He has won many awards.`],
+[87,`저는 로맨틱 영화를 무척 좋아합니다.`,`I am crazy about romantic movies.`],
+[88,`그곳에서 영화를 찍고 있었습니다.`,`A film was being shot there.`]],p:[
+[`그들은 큰 상영관과 양질의 음향시설을 가지고 있어요.`,`They have a big screen and a quality sound system.`],
+[`그녀는 40대 후반이에요.`,`She is in her mid-forties.`],
+[`그는 2010년에 데뷔 했어요.`,`He made his debut in 2010.`],
+[`최근에/ 그는 기부를 했어요/ 불쌍한 어린이들을 도우려고`,`Recently, he donated money to help poor children.`],
+[`우리는 표를 예약했어요/ 미리// 그 영화가 매우 인기 있었기 때문에`,`We booked the tickets in advance since the movie was very popular.`],
+[`뒷 좌석을 얻을 수 있나요?`,`Can I get back-row seats?`],
+[`영화관에 가는 길에/ 제 차에 펑크가 났어요`,`On my way to the theater, my car had a flat tire.`],
+[`다른 사람하고 함께 그 영화를 보는 게 어때?`,`What about watching the movie with another person?`]]},
+{n:7,theme:`공원`,topics:[`산책`,`조깅`,`가족`],s:[
+[89,`그 공원은 그것의 아름다운 인공호수로 유명합니다.`,`The park is famous for its beautiful artificial lake.`],
+[90,`저는 공원에서 트랙을 따라 걷는 것을 좋아합니다.`,`I like walking along the track at the park.`],
+[91,`공원에서의 조깅은 제 기분을 상쾌하게 만들어 줍니다.`,`Jogging at the park makes me feel refreshed.`],
+[92,`그 공원은 오래되어서 고풍스러운 분위기가 있습니다.`,`The park is old and has a classic atmosphere.`],
+[93,`저는 또한 나무 아래에 있는 벤치에 앉아서 간식을 먹는 것이 좋습니다.`,`I also like to eat some snacks sitting on a bench under the trees.`],
+[94,`설상가상으로 저는 공원에서 신분증도 잃어버렸습니다.`,`To make matters worse, I lost my ID at the park.`],
+[95,`그 공원의 정문을 지나가면 우측에 인공폭포가 있어요.`,`When you pass the main entrance of the park, you can see an artificial waterfall on your right.`],
+[96,`운동장 근처에는 부모님들이 아이들을 볼 수 있는 공간이 마련되어 있어요.`,`Near the playground, there is an area where parents can watch their children.`],
+[97,`어떤 부모님은 가족과 함께 즐길 수 있도록 도시락을 싸 오시기도 합니다.`,`Some parents bring a packed lunch to enjoy with their families.`],
+[98,`공원에서 어떤 사람들은 조깅을 하고 다른 사람들은 트랙을 따라 자전거를 타기도 합니다.`,`In the park, some people jog while others ride bicycles along the track.`],
+[99,`공원 모퉁이에는 사람들이 가볍게 음식이나 음료를 즐길 수 있는 스낵바가 있습니다.`,`On the corner of the park, there is a snack bar where people can enjoy a quick bite to eat or a drink.`],
+[100,`그 공원은 어린이들과 어른들에게 인기가 많아요.`,`The park is popular with children and adults.`],
+[101,`저는 놀이동산에서 길을 잃었던 적을 기억합니다.`,`I remember the time when I got lost in a theme park.`],
+[102,`그곳은 가족들이 주말을 즐기기에 좋은 장소입니다.`,`It's a really great place for families to enjoy their weekends.`],
+[103,`매 년, 꼭 축제가 그 공원에서 열립니다.`,`Every year, a flower festival is held in the park.`],
+[104,`친구와 수다 떠는 것은 저한테 큰 기쁨을 줍니다.`,`Having a chat with my friends gives me the greatest pleasure.`],
+[105,`공원을 걸을 때, 저는 첫사랑을 우연히 만났어요.`,`When I was walking through the park, I bumped into my first love.`],
+[106,`우리가 공원에 도착 하자마자, 우리는 앉기 위해 잔디에 돗자리를 깔아요.`,`As soon as we arrive at the park, we spread our blanket on the grass to sit on.`],
+[107,`건강한 사람들은 운동을 통해 건강을 유지하려고 노력합니다.`,`Healthy people make efforts to maintain their health through exercise.`]],p:[
+[`우리는 자전거를 탔다/ 한 시간 동안`,`We rode bicycles for 1 hour.`],
+[`우리는 강을 따라 걸었다/ and 아름다운 경치를 즐겼다`,`We walked along the river and enjoyed the beautiful scenery.`],
+[`그것은 매우 흥미진진했고/ 우리는 우리의 스트레스를 해소할 수 있었다`,`It was very exciting, so we could relieve our stress.`],
+[`당신이 공원의 정문을 지나면/ 당신은 분수을 볼 수 있다// 당신의 왼 쪽`,`When you pass the main entrance of the park, you can see a fountain on your left.`],
+[`당신이 그 공원에 가면/ 당신은 많은 사람들을 볼 수가 있다// 운동하고 있는`,`When you go to the park, you can see many people exercising.`],
+[`모두가 건강하고 에너지 넘쳐 보인다`,`Everyone looks healthy and energetic.`]]},
+{n:8,theme:`음악`,topics:[`감상`,`가수`,`콘서트`],s:[
+[108,`저는 영어학원에 가는 길에 음악을 듣습니다.`,`I listen to music on my way to the English institute.`],
+[109,`저는 어린이일 때 처음 음악에 관심을 가지게 되었습니다.`,`I first became interested in music when I was a child.`],
+[110,`저는 항상 자기 전에 음악을 듣습니다.`,`I always listen to music before going to bed.`],
+[111,`저는 댄스음악을 들으면 신납니다.`,`I feel excited when I listen to dance music.`],
+[112,`요즘에 저는 김동률 음악에 빠져들고 있어요.`,`These days, I'm really into Kim Dongryul's music.`],
+[113,`저는 그 사운드에 무척 감동을 받았어요.`,`I was really impressed by the sound quality.`],
+[114,`많은 가수들이 초청되어 열정적인 공연을 보여줬습니다.`,`Many guest singers were invited and gave passionate performances.`],
+[115,`음악을 듣는것은 마음을 가라 앉히는데 도움이 됩니다.`,`Listening to music helps me to calm down.`],
+[116,`이곳은 노래를 부르기에 완벽한 장소입니다.`,`It is the perfect place to sing.`],
+[117,`그것은 제 인생에 가장 소중한 순간으로 남아있습니다.`,`It remains one of the most precious moments of my life.`],
+[118,`음악을 듣는 것이 제가 힘든 시간을 극복하는데 도움이 되었습니다.`,`Listening to music helped me get through a difficult time.`],
+[119,`서태지는 우리나라에서 가장 유명한 음악가 중 한 사람 입니다.`,`Seo Taiji is one of the most popular musicians in Korea.`],
+[120,`모두가 그녀의 노래들을 따라 불렀고, 그 콘서트는 약 3시간 동안 지속되었습니다.`,`Everyone sang along with her songs and the concert lasted for about 3 hours.`]],p:[
+[`저는 항상 음악을 들어/ 자기 전에`,`I always listen to music before going to bed.`],
+[`저는 주로 지하철에서 음악을 들어요/ 학교갈 때`,`I usually listen to music on the subway when I go to school.`],
+[`저는 처음으로 음악에 관심을 가지게 되었어요/ 제가 어린이 일 때`,`I first became interested in music when I was a child.`],
+[`윤종신과 JYP를 비교하고 싶어요`,`I'd like to compare Yun Jong Shin and JYP.`],
+[`윤종신은 몇몇 토크 쇼의 진행자 에요.`,`Yun Jongshin is a main host of some talk shows.`],
+[`그는 매월 새로운 싱글앨범을 발매하고, 종종 콘서트를 열어요.`,`He releases a new single every month and often holds concerts.`],
+[`그들은 크게 공헌을 해 왔어요/ 한국의 음악 산업에`,`They have greatly contributed to the Korean music industry.`],
+[`그거 파란색 있어요?`,`Do you have it in blue?`]]},
+{n:9,theme:`인터넷 · 모임`,topics:[`포털`,`SNS`,`축제`],s:[
+[121,`네이버는 한국에서 가장 인기 있는 포털 사이트입니다.`,`Naver is the most popular portal site in Korea.`],
+[122,`당신은 그것을 들어봤을 거라고 생각합니다.`,`I think you may have heard of it.`],
+[123,`그것은 매우 빠르고 정확합니다.`,`It is very fast and accurate.`],
+[124,`인터넷을 사용하는 것이 어려워서, 저희 형이 인터넷 사용법을 알려주었습니다.`,`It was difficult to use the Internet, so my brother taught me how to use it.`],
+[125,`스마트폰들이 발달 덕분에 많은 사람들은 SNS에 쉽게 접속할 수 있습니다.`,`Thanks to the development of smartphones, many people can easily access social networking services.`],
+[126,`페이스북에 대한 가장 좋은점은, 당신은 친구들과 쉽게 소통할 수 있고 관계를 유지할 수 있어요`,`The best thing about using Facebook is that you can easily communicate with your friends and maintain relationships.`],
+[127,`많은 사람들이 그들의 커뮤니케이션과 사교 기술을 잃고 있어요.`,`Many people are losing their communication and social skills.`],
+[128,`거기에는 불광천이라 불리우는 긴 개천이 하나 있고, 많은 벚꽃들이 천을 따라 피어있어요.`,`There is a long stream called Bulgwangcheon, and many cherry blossoms bloom along the stream.`],
+[129,`요즘엔, 모임들과 축제들은 훨씬 더 커졌습니다.`,`These days, gatherings and festivals have become much bigger.`],
+[130,`하지만, 대형 이벤트들은 또한 문제들을 야기합니다. 교통혼잡, 소음과 쓰레기 같은`,`However, big events also cause problems like traffic jams, noise, and garbage.`]],p:[
+[`그것은 가능하게 해준다 (enable)// 내 친구들이// 체크할 수 있도록// 내가 어떻게 지내는지`,`It enables my friends to check how I am doing.`],
+[`내 생각에/ 그것은 멋진 방법이다// 최신 트렌드를 따라가기 위한 (keep up with)`,`I think it is a great way to keep up with the latest trends.`],
+[`내 생각에/ 우리는 노력해야 한다/ 그것을 적당하게 (in moderation) 사용하도록`,`I think we should try to use it in moderation.`],
+[`하지만, 몇몇 사람들은 인터넷에 중독 되어 있다/ 그들은 너무 많은 시간을 쓴다/ 인터넷 사용에 (spend 목적어 + ~ing)`,`However, some people are addicted to the Internet. They spend too much time using it.`],
+[`우리는 사려깊어야 (considerate) 하고// and 좋은 매너들을 가져야 한다// when 공공 축제들에 참석할때`,`We should be considerate and follow have manners when attending public festivals.`]]},
+{n:10,theme:`집안일 · 산업`,topics:[`집안일`,`대기업`,`복지`],s:[
+[131,`집에 오면, 저는 항상 바닥을 쓸고 닦아요.`,`Whenever I return home, I always sweep and wipe the floor.`],
+[132,`저는 혼자 살아요, 따라서 모든 집안일을 혼자 해야 합니다.`,`I live alone, so I have to do all household chores by myself.`],
+[133,`특별한 일이 있으면, 저는 제 정장을 다려요.`,`When I have a special occasion, I iron my suit.`],
+[134,`집안일이 끝난 후, 저는 안심했습니다.`,`After finishing my chores, I felt relieved.`],
+[135,`저는 목요일마다 쓰레기 분리수거를 담당하고 있습니다.`,`I'm responsible for separating trash on Thursdays.`],
+[136,`저는 요리하는 것을 좋아하지만, 설거지 하는 것은 꽤 귀찮아요.`,`I like cooking, but washing the dishes is quite annoying.`],
+[137,`저는 집안 장식품들을 샀어요.`,`I bought some house decorations.`],
+[138,`지난 주말에는 빨래를 하고 대청소를 했습니다.`,`I did my laundry and thoroughly cleaned my house last weekend.`],
+[139,`제가 집에 있을 때, 저는 주로 바닥을 청소기로 밀고 쓰레기를 내다 버려요.`,`When I am at home, I usually vacuum the floor and take out the garbage.`],
+[140,`그들은 많은 상품을 다른 나라들로 수출합니다. 그것은 우리나라의 명성을 높여줍니다.`,`They export many products to other countries, which improves my country's reputation.`],
+[141,`큰 회사들은 유급 휴가, 육아 휴직, 교육 지원과 같은 좋은 복리후생을 제공합니다.`,`Big companies provide good benefits such as paid vacation, maternity leave and educational support.`],
+[142,`당신도 알다시피, 큰 회사들은 좋은 명성을 가지고 있어요. 그리고 그것은 그들의 직원들에게 큰 자부심을 줍니다.`,`As you know, big companies have a good reputation and it gives enormous pride to their employees.`],
+[143,`저도 또한 큰 회사에서 일하고 싶어요. 제 실무 기술을 향상하고 사회 인맥을 확장하기 위해`,`I would also like to work in a big company to improve my practical skills and expand my social network.`]],p:[
+[`그 디자인은 심플하고 and 그 폰 들은 나옵니다// 다양한 색깔들로`,`The design is simple, and the phones come in various colors`],
+[`그 배터리 수명은 매우 인상적이다.`,`The battery life is so impressive`],
+[`큰 회사들은 제공한다// 좋은 복리후생들을// such as 유급 휴가, 의료 관리 and 교육 지원과 같은`,`Big companies provide good benefits such as paid vacation, medical care and education support.`],
+[`집안일을 하는 것은 피곤한 일이지만/ but 그것은 나를 상쾌하게 만든다`,`Doing housework is tiring but it makes me refreshed.`],
+[`우리 엄마는 요리를 잘한다.`,`My mom is a really good cook.`],
+[`그녀는 항상 만든다// 건강하고 맛있는 한국음식을`,`She always makes healthy and delicious Korean food.`],
+[`그녀는 말했다// she 남자친구랑 헤어졌다고`,`She said she broke up with her boyfriend.`]]},
+{n:11,theme:`걷기 · 조깅 · 하이킹`,topics:[`운동`,`등산`,`부상 예방`],s:[
+[144,`저는 잠원지구 한강을 따라 조깅하는 것을 즐깁니다.`,`I really enjoy jogging along the Han river in the Jamwon area of the city.`],
+[145,`저는 그곳에서 운동하는 게 좋아요. 왜냐하면 그곳은 잘 관리되어졌기 때문에요.`,`I prefer exercising there because it is well maintained.`],
+[146,`또한 그곳은 최근에 보수되었습니다.`,`Also, it was recently renovated.`],
+[147,`부상을 피하기 위해서는 잘 맞는 신발을 신는 것이 매우 중요합니다.`,`It is important to wear shoes that fit well to avoid injuries.`],
+[148,`걷기를 한 후, 저는 매우 건강하고 활력이 넘치는 기분입니다.`,`After walking, I feel very healthy and full of energy.`],
+[149,`저는 주로 츄리닝과 운동화를 착용합니다.`,`I usually wear sweats and running shoes.`],
+[150,`공원에서 걷는 것은 항상 저에게 기쁨을 가져다 줍니다.`,`Walking in the park always brings me joy.`],
+[151,`부상을 방지하기 위해 준비운동을 충분히 하는 것을 잊지 마세요.`,`Don't forget to do enough warm-up exercises to prevent injuries.`],
+[152,`조깅의 가장 좋은 점은 몸매를 유지시켜 주는 것입니다.`,`The best thing about jogging is that it helps me stay in shape.`],
+[153,`하이킹 중간에, 나는 중심을 잃고 미끄러졌다.`,`In the middle of the hike, I lost my balance and slipped`],
+[154,`그곳까지는 걸어서 10분밖에 안 걸려요.`,`It only takes 10 minutes to get there on foot.`],
+[155,`그것은 당신의 스트레스를 해소 시켜 주고, 당신은 일이나 공부를 열심히 할 동기가 생깁니다.`,`It can relieve your stress and you'll be motivated to work or study hard.`],
+[156,`내가 산 정상에 오르면, 나는 성취감을 느껴요.`,`When I get to the top of the mountain, I feel a sense of achievement.`],
+[157,`등산을 하는 동안, 당신은 정상에 도달하기 전까지 많은 어려움을 극복해야 합니다.`,`While hiking, you have to overcome many difficulties before reaching the top.`]],p:[
+[`나는 일주일에 다섯 번 걸으러 간다.`,`I go for a walk 5 times a week.`],
+[`걷기 후에/ 나는 벤치에 앉아서 휴식을 취한다// 아름다운 경치를 감상하면서(appreciate)`,`After walking, I sit down on a bench and take a vreak while appreciating the beautiful scenery.`],
+[`그 조깅 트랙은 잘 관리 되어져 있다/ 그래서 나는 안전하게 조깅 할 수 있다.`,`The jogging track is well maintained, so I can jog safely.`],
+[`다행히, 나는 스크래치만 났다// 내 무릎와 팔꿈치 위에`,`Fortunately, I just got scratched on my knees and elbows.`],
+[`나는 휴식을 취해야만 한다/ 지치면`,`I must take a break when I feel exhausted.`],
+[`물을 가지고 가는 것을 잊지 마/ 탈수 안 되기 위해`,`Don't forget to bring a bottle of water in order not to get dehydrated.`],
+[`요즘에/ 많은 사람들이 관심이 있다/ 건강과 다이어트에`,`These days, many people are interested in health and diet.`],
+[`내가 산 정상에 도착하면/ 나는 성취감(a sense of achievement)을 느낄 수 있다.`,`When I get to the top of the mountain, I feel a sense of achievement.`],
+[`만약 네가 정기적으로(on a regular basis) 등산을 한다면/ 너는 근육과 관절을 강화시킬 수 있다.`,`If you hike on a regular basis, you can strengthen your muscles and joints.`],
+[`그것은 나를 돕는다// 나의 균형을 유지하도록// 가파른 언덕을 위로 걷는 동안`,`It helps me keep my balance while walking on steep hills.`]]},
+{n:12,theme:`은행 · 미용실`,topics:[`은행`,`ATM`,`헤어`],s:[
+[158,`현금지급기가 제 카드를 수락하지 않아서 저는 너무 당황스러웠습니다.`,`The ATM didn't accept my card, so I was in a panic.`],
+[159,`요즘음에, 은행은 우리 경제에서 가장 중요한 기관중 하나로 여겨집니다.`,`Nowadays banks are regarded as one of the most important institutions in our economy.`],
+[160,`은행직원과 고객의 수가 감소해 왔습니다.`,`The number of tellers and customers has decreased.`],
+[161,`그들은 고객을 가족처럼 대하라고 훈련 받습니다.`,`They are trained to treat customers like family.`],
+[162,`마그네틱 라인이 손상되어서, 저는 그것을 사용할 수 없어요.`,`As the magnetic strip on my credit card is damaged, I can't use it.`],
+[163,`그 체크카드는, 제가 현금을 지갑에 많이 가지고 다니는 걱정을 안 할 수 있게 해 주어요.`,`The debit card enables me not to worry about carrying a lot of cash in my wallet.`],
+[164,`은행 운이 닫았을 때 조차도, 저는 걱정할 필요가 없어요. 왜냐하면 ATM 기기가 주변에 많이 있기 때문이죠.`,`Even when banks are closed, I don't need to worry because there are many ATM machines around.`],
+[165,`당신이 은행에 가면, 당신은 카페에 있는 듯한 느낌을 받아요.`,`When you go to a bank, you feel like you are in a café.`],
+[166,`따라서, 당신은 은행을 방문할 때마다, 항상 좋은 인상을 받을 것이에요.`,`So you'll always get a good impression when you visit a bank.`],
+[167,`은행은 9시부터 4시까지 월요일부터 금요일까지 문을 열어요.`,`Banks are open from 9am to 4pm from Monday to Friday.`],
+[168,`저는 보통 두 달에 한 번 머리를 자릅니다.`,`I usually get my hair cut every two months.`],
+[169,`제 헤어 디자이너는 항상 저에게 잘 어울리는 스타일을 추천 줍니다.`,`My hair designer always recommends a hairstyle that suits me well.`],
+[170,`저는 머리를 하고 나면 기분이 상쾌해집니다.`,`I feel refreshed after getting my hair done.`]],p:[
+[`해외여행 전에, 나는 은행에 가서 환전을 한다.`,`Before traveling abroad, I go to the bank to exchange foreign currency.`],
+[`은행은 9시부터 4시까지 연다.`,`Banks are open from 9 a.m. to 4 p.m.`],
+[`나는 잔액을 확인할 수 있고, 송금할 수 있다/ 은행 방문 없이`,`I can check my balance and transfer money without visiting a bank.`],
+[`요즘에, 인터넷 뱅킹과 폰뱅킹 서비스가 넓게 퍼져 있다.`,`Nowadays, internet banking and phone banking services are widely used.`],
+[`그 결과로 은행원과 고객의 수가 감소해 왔다.`,`As a result, the number of tellers and customers has decreased.`],
+[`나는 항상 그들의 서비스에 만족한다 (be satisfied with).`,`I'm always satisfied with their service.`],
+[`그들은 다양한 투자 상품을 판매한다/ 따라서 은행원들은 특화된 지식을 가지고 있다/ of finance.`,`They sell various investment products so bankers have specialized knowledge of finance.`],
+[`직원이 알려 주었다/ that 제 카드 위 마그네틱 라인이/ 손상 되었다고`,`The teller informed me that the magnetic strip on my card was damaged`],
+[`그것은 5분이 걸렸다/ 내 카드를 재발급 받는 데에`,`It took about 5 minutes to have my card reissued.`]]},
+{n:13,theme:`건강 · 헬스클럽`,topics:[`헬스장`,`식습관`,`멘탈`],s:[
+[171,`그곳은 최신식 장비를 갖춘 넓은 헬스클럽입니다.`,`It is a spacious gym with all the latest equipment.`],
+[172,`그 헬스장은 요가, 에어로빅, 댄스 수업 등 다양한 수업들을 제공합니다.`,`The gym offers a variety of classes such as yoga, aerobics and dance classes.`],
+[173,`제 친구는 균형 잡힌 생활을 유지합니다.`,`My friend maintains a balanced lifestyle.`],
+[174,`건강한 사람들은 긍정적인 태도를 가지고 있고, 쉽게 스트레스를 받지 않아요.`,`Healthy people usually have a positive attitude and don't get stressed easily.`],
+[175,`물을 많이 마시는 것은 혈액순환에 좋습니다.`,`Drinking plenty of water is good for circulation.`],
+[176,`발효식품은 당신의 건강에 좋습니다.`,`Fermented foods are good for your health.`],
+[177,`그는 유머감각이 풍부며 재치가 있습니다.`,`He has a good sense of humor and is witty.`],
+[178,`입회비는 얼마입니까?`,`How much is the membership fee?`],
+[179,`런닝머신은 몇 개 인가요?`,`How many treadmills do you have at the gym?`],
+[180,`개인 트레이닝 있나요?`,`Do you offer personal training?`]],p:[
+[`나는 과하게(excessively) 먹지 않아요.`,`I don't eat excessively.`],
+[`저는 정신적인 건강이 육체적인 건강만큼 중요하다고 생각해요.`,`I think mental health is as important as physical health`],
+[`이런 종류의 태도는 다른 사람들에게 좋은 에너지를 줍니다.`,`This kind of attitude gives good energy to other people.`],
+[`저는 스트레스를 바로 풀어요.`,`I relieve my stress immediately.`],
+[`그는 항상 그의 식습관에 신경 써요`,`He is always careful about his diet.`],
+[`저는 항상 동기를 받아요/ 그로부터/ 건강한 인생을 유지 할`,`I always get motivated by him to maintain a healthy lifestyle.`],
+[`헬스장들은 주로 지하층에(basement floor) 위치해 있어요`,`Gyms are usually located in basements.`],
+[`각각의 런닝 머신(treadmill)은 작은 스크린을 가지고 있어요/ so 당신은 TV나 영화를 볼 수 있어요/ 달리거나 걸으면서`,`Each treadmill has a little screen so you can watch TV while running or walking.`]]},
+{n:14,theme:`날씨 · 명절 · 요리`,topics:[`날씨`,`추석`,`설날`],s:[
+[181,`내일 비가 많이 온다고 들었습니다.`,`I heard that it'll rain heavily tomorrow.`],
+[182,`한국의 장마철에는 폭우가 쏟아집니다.`,`It rains heavily during the rainy season in Korea.`],
+[183,`봄에는 많은 꽃 들이 피어요.`,`Lots of flowers bloom in spring.`],
+[184,`여름은 덥고 습해요. 이것이 저를 짜증나게 만들어요.`,`Summer is hot and humid, which really annoys me.`],
+[185,`겨울이면 많은 사람 들은 스키, 보딩, 썰매와 같은 눈 운동을 즐깁니다.`,`In winter, many people enjoy snow sports such as skiing, snowboarding, and sledding.`],
+[186,`고속도로는 차들로 가득 차 있어요.`,`The highway is packed with cars.`],
+[187,`한국 사람들은 가족을 매우 중요하게 여깁니다.`,`Koreans regard family as very important.`],
+[188,`추석에 사람들은 제사를 지냅니다.`,`On Chuseok, people perform ancestral rites.`],
+[189,`가장 큰 한국의 명절은 추석이에요. 이것은 추수 축제의 한 종류에요.`,`The biggest holiday in Korea is Chuseok, which is a kind of harvest festival.`],
+[190,`우리는 주로 그것을 축하하기 위해 3일의 휴일을 가져요.`,`We usually have a three-day holiday to celebrate it.`],
+[191,`추석 저녁에, 사람들은 밖에 나가서 보름달을 보고 소원을 빌어요.`,`On Chuseok evening, people go out to see the full moon and make wishes.`],
+[192,`트리들은 크리스마스 장식품들로 장식 되어 있습니다.`,`Trees are decorated with Christmas ornaments.`]],p:[
+[`매 년/ 꽃 축제들이 열립니다.`,`Every year, flower festivals are held`],
+[`온도들은 주로 떨어집니다/ 영하로 (0 아래로)`,`Temperatures usually drop below zero.`],
+[`지구 온난화(global warming) 때문에/ 많은 사람들이 경험합니다/ 특이한 기후 상황을`,`Due to global warming, many people experience unusual weather conditions.`],
+[`여름과 겨울은 점점 더 길어지고 있어요`,`Summer and winter are getting longer and longer.`],
+[`나는 바로 구입을 했어요`,`I made a purchase immediately.`],
+[`날씨가 갑자기 더워졌어요`,`The weather suddenly became hot.`],
+[`설날에/ 모든 가족 들은 모입니다/ and 몇몇 사람들은 전통의상을 입어요// called 한복`,`On New Year's Day, many family members gather together and some people wear traditional costumes called Hanbok.`],
+[`사람들은 어른들에게 절을 해요/ and 새해의 돈을 받아요// which is 세뱃돈이라 불리는`,`People bow to the elders and receive their New Year's money which is called Sebedon.`],
+[`그것은 오래 걸려요/ 우리 고향까지 가는 데에// because 고속도로가 차들로 꽉 차 있기(packed) 때문에`,`It takes a long time to get to our hometown because the highway is packed with cars.`],
+[`그 거리들은 장식되어 있어요/ 크리스마스 장식품들과 조명들로`,`The streets are decorated with Christmas ornaments and lights.`],
+[`몇몇의 종교인들은 교회에 가서/ and 예배에 참석해요`,`Some religious people go to church and attend a service.`],
+[`많은 특별한 행사들이 열려요/ 교회 안에서// 크리스마스 날`,`Many special events are held at churches on Christmas.`]]},
+{n:15,theme:`이웃 나라 · 프로젝트 · 재활용`,topics:[`일본`,`발표`,`환경`],s:[
+[193,`일본은 섬나라이기 때문에 사람들은 해산물을 많이 먹어요. 제 생각엔 그래서 일본 사람들이 오래 건강하게 사는 것 같습니다.`,`Japan is an island country, so people eat a lot of seafood. I think that's why Japanese people live long and healthy lives.`],
+[194,`많은 사람 들이 교통수단으로써 자전거를 탑니다`,`Many people ride bicycles as a means of transportation.`],
+[195,`우리는 '혼전 동거'에 관한 사람들의 의견에 대해 조사 했어요.`,`We conducted a survey about people's opinions on cohabitation before marriage.`],
+[196,`우리는 설문지를 만들었고, 설문 조사를 위해 신촌으로 갔어요.`,`We made a questionnaire and went to Shinchon to conduct the survey.`],
+[197,`저는 발표 담당이었어요.`,`I was in charge of giving a presentation.`],
+[198,`저는 선배에게 도움을 요청했어요.`,`I asked my senior for help.`],
+[199,`우리의 프로젝트는 성공적이었고, 우리는 모두 A를 받았어요.`,`Our project was successful and we all got an A.`],
+[200,`그 수업에서, 모든 학생들은 성공적인 마케팅 전략을 찾기 위한 프로젝트를 받았어요.`,`In that class, all students were given a project to come up with a successful marketing strategy.`],
+[201,`요즘에, 재활용은 환경 보전을 위해 매우 중요한 활동이라고 여겨져요.`,`These days, recycling is regarded as a very important activity to protect the environment.`],
+[202,`정부가 사람들의 인식을 바꾸기 위해, 캠페인을 열어야 한다고 생각해요.`,`I think the government should launch a campaign to change people's awareness.`],
+[203,`언젠가는 이 모든 노력이 성과를 거둘 날이 올 겁니다.`,`I'm sure someday all these efforts will pay off.`]],p:[
+[`만리장성은 진나라(Qin dynasty) 시절에 건설되었습니다.`,`The Great Wall of China was built during the Qin dynasty.`],
+[`내가 1학년 때/ 우리 대학교 안에서/ 나는 발표를 해야만 했어요/ PPT를 사용해서`,`When I was a freshman at university, I had to give a presentation using PowerPoint.`],
+[`2학년 때 / 나는 마케팅 수업을 들었어요`,`In my sophomore year, I took a course in marketing.`],
+[`저는 4명 학생의 그룹을 만들었어요 / and 프로젝트 작업 (work on)을 시작했어요`,`I made a group of 4 students and started working on the project.`],
+[`교수님과 학생들은 감동 받았어요.`,`The professor and my classmates were impressed.`],
+[`때로는/ 우리는 늦게 까지 있었어요 / 더 자세한 정보를 찾기 위해서`,`Sometimes, we had to stay up late to find more detailed information.`],
+[`그것은 귀중한 경험 이었어요`,`It was a very valuable experience.`],
+[`우리는 특별한 백을 사용해요 / 쓰레기를 버리기 위해`,`We use a special bag to throw away trash.`],
+[`우리 아파트 단지 주민들이 재활용 가능 물품들을 분리해요/ 일주일에 한 번`,`The residents of my apartment complex separate recyclable items once a week.`],
+[`하지만/ 어떤 사람들은 여전히 많은 일회용품들을 (disposable products) 사용해요 / and 어떤 사람들은 버려요 / 너무 많은 음식을`,`However, some people still use a lot of disposable products and some people waste too much food.`]]},
+{n:16,theme:`지형 · 카페 · 대중교통 · 이슈`,topics:[`교통`,`카페`,`부동산`],s:[
+[204,`지하철은 깨끗하고, 쾌적한 분위기를 가지고 있어요.`,`The subway is clean and has a pleasant atmosphere.`],
+[205,`버스는 전용 차선을 가지고 있어요. 따라서 그것은 교통 혼잡을 피할 수 있어요.`,`Buses have their own lanes, so they can avoid traffic jams.`],
+[206,`버스는 많은 노선을 가지고 있어요. 따라서 저는 제 목적지까지 가는 버스를 쉽게 찾을 수 있어요.`,`Buses have many routes so I can easily find one that goes to my destination.`],
+[207,`버스 정류장에는 스크린이 있어요. 따라서 저는 버스의 도착 시간을 확인할 수 있어요.`,`There is a screen at the bus stop so I can check the bus arrival time.`],
+[208,`몇 해에 걸쳐, 스타벅스나 커피빈과 같은 많은 서양 스타일의 커피숍들이 생겨났어요.`,`Over the years, many Western-style coffee shops such as Starbucks and Coffee Bean have opened.`],
+[209,`길을 걸으면서, 심지어 수업 중에 커피를 마시는 사람들을 쉽게 볼 수 있다.`,`It's common to see people drinking coffee while walking down the street or even during class.`],
+[210,`제주도는 삼다도로 불리는 다른 이름이 있어요.`,`Jeju has another name, called Samda-do.`],
+[211,`삼다는 문자 그대로 세 가지의 풍요로움을 의미해요.`,`Samda literally means "three abundances" – many stones, a lot of wind, and many women.`],
+[212,`소외계층의 사람들이 도시에 아파트를 사는 것은 매우 어려워요.`,`It's so hard for underprivileged people to buy an apartment in the city.`],
+[213,`한국에서 많은 사람들이 큰 도시들에만 집중함에 따라, 아파트 가격이 치솟고 있습니다.`,`Since many people are concentrated in big cities in Korea, apartment prices are soaring.`],
+[214,`도시와 농촌의 아파트 가격에는 큰 차이가 있어요.`,`There is a big gap in apartment prices between cities and rural areas.`]],p:[
+[`당신은 공부를 하고 책을 읽을 수 있어요 / 아무런 방해 없이`,`You can study and read a book without any distractions.`],
+[`많은 카페들이 제공 합니다 / 공짜 무선 인터넷 서비스를`,`Many cafes provide free wireless internet service. (= Many cafes provide free Wi-Fi.)`],
+[`우리나라의 삼면은 바다로 둘러싸여 있어요.`,`Three sides of my country are surrounded by seas.`],
+[`국토의 70%는 산으로 덮여 있어요.`,`70% of the land is covered by mountains.`],
+[`서울 안에서/ 한강은 흐릅니다 (run) /동쪽에서 서쪽으로`,`In Seoul, the Han River runs from the east to the west.`],
+[`사람들은 걱정할 필요가 없어요 / 늦는 것에 대해`,`People don't need to worry about being late.`],
+[`그들은 경치들을 볼 수가 있어요 / 창문 밖으로`,`They can enjoy the view outside the window.`],
+[`저는 주로 택시를 타요 / 밤늦게/ 버스와 지하철이 운행하지 않을때`,`I usually take a taxi late at night when buses and subways stop running.`]]}], bonus:[
+[`또한 그녀는 또렷하게 말해요. 그 결과, 그녀가 말하는 것에 주의를 기울이기가 쉬워요.`,`Also she speaks clearly, as a result, it's easy to pay attention to what she says.`],
+[`수업 초반부에, 강사는 빠르게 우리가 어제 배운 것을 복습합니다.`,`At the beginning of the class, the instructor quickly reviews what we learned yesterday.`],
+[`그리고 나서, 그 강사는 오늘의 토픽과 몇 가지 질문의 답변방법에 대해 설명을 해 줍니다.`,`Then the instructor explains today's topic and how to answer several questions.`],
+[`그녀는 또한 중요한 단어와 표현 들을 가르쳐 줍니다.`,`She also teaches important vocabulary and expressions.`],
+[`이런 종류의 책들은 주로 저에게 긍정적인 영향을 끼쳐요.`,`These kinds of books usually have a positive influence on me.`],
+[`요즘에 저는 자기 계발서를 많이 읽어요.`,`These days, I read a lot of self-help books.`],
+[`저는 주로 서점에서 베스트셀러를 구입합니다. 최근의 독서경향에 발맞추기 위해`,`I usually buy bestsellers at bookstores to keep up with the latest reading trends.`],
+[`그의 소설의 등장인물들은 믿을 수 없을 정도로 현실적이에요.`,`The characters in his novel are incredibly realistic.`],
+[`그 책을 읽은 후, 저는 매우 동기를 부여 받았어요.`,`I felt motivated after reading the book`],
+[`중국의 만리장성은 세계에서 가장 긴 벽이에요.`,`The Great Wall of China is the longest wall in the world.`],
+[`일본에는 많은 온천들이 있어요.`,`There are many hot springs in Japan.`],
+[`일본은 동아시아에 위치한 섬나라에요.`,`Japan is an island country in East Asia.`],
+[`시골에는 많은 아파트들이 아직 빈 채로 남아있어요.`,`There are a lot of apartments that remain empty in the countryside.`],
+[`요즘에, SNS가 많이 사용되고 있어서 많은 사람들이 그것을 사용합니다.`,`These days, social networking services are widely used, so many people use them.`],
+[`그들의 상태나 사진들을 올림으로써, 사람들은 쉽게 그들의 친구들과 연락하며 지낼 수 있어요.`,`People can easily stay in touch with their friends by posting updates and uploading pictures.`],
+[`많은 사람들이 다른 사람들의 사진을 보면서 소외감을 느껴요.`,`Many people feel alienated when they see other people's pictures`],
+[`그것은 매우 중독성이 있어요.`,`It is very addictive.`],
+[`당신이 한번 이 서비스들을 사용하면, 그만 두기가 어려워요.`,`Once you use these services, it is hard to stop.`],
+[`우리는 그것을 적당하게 사용해야 합니다.`,`We have to use it in moderation.`],
+[`우리는 그 서비스들을 좀 더 주의 깊고, 신중하게 사용해야 합니다.`,`We should try to use the services more carefully and thoughtfully.`]], verbs:[
+[`beat`,`beat`,`beaten`],[`become`,`became`,`become`],[`bite`,`bit`,`bitten`],[`break`,`broke`,`broken`],[`bring`,`brought`,`brought`],[`build`,`built`,`built`],[`buy`,`bought`,`bought`],[`catch`,`caught`,`caught`],[`come`,`came`,`come`],[`cost`,`cost`,`cost`],[`cut`,`cut`,`cut`],[`deal`,`dealt`,`dealt`],[`do`,`did`,`done`],[`drive`,`drove`,`driven`],[`eat`,`ate`,`eaten`],[`fall`,`fell`,`fallen`],[`feel`,`felt`,`felt`],[`fight`,`fought`,`fought`],[`find`,`found`,`found`],[`fit`,`fit`,`fit`],[`forgive`,`forgave`,`forgiven`],[`get`,`got`,`gotten`],[`give`,`gave`,`given`],[`go`,`went`,`gone`],[`grow`,`grew`,`grown`],[`hang`,`hung`,`hung`],[`have`,`had`,`had`],[`hear`,`heard`,`heard`],[`hit`,`hit`,`hit`],[`hold`,`held`,`held`],[`hurt`,`hurt`,`hurt`],[`know`,`knew`,`known`],[`lay`,`laid`,`laid`],[`lead`,`led`,`led`],[`leave`,`left`,`left`],[`lend`,`lent`,`lent`],[`lose`,`lost`,`lost`],[`make`,`made`,`made`],[`meet`,`met`,`met`],[`pay`,`paid`,`paid`],[`read`,`read`,`read`],[`ride`,`rode`,`ridden`],[`run`,`ran`,`run`],[`say`,`said`,`said`],[`see`,`saw`,`seen`],[`sell`,`sold`,`sold`],[`send`,`sent`,`sent`],[`show`,`showed`,`showed`],[`sing`,`sang`,`sung`],[`sit`,`sat`,`sat`],[`sleep`,`slept`,`slept`],[`speak`,`spoke`,`spoken`],[`spend`,`spent`,`spent`],[`steal`,`stole`,`stolen`],[`swim`,`swam`,`swum`],[`spread`,`spread`,`spread`],[`stand`,`stood`,`stood`],[`sweep`,`swept`,`swept`],[`take`,`took`,`taken`],[`teach`,`taught`,`taught`],[`tell`,`told`,`told`],[`think`,`thought`,`thought`],[`throw`,`threw`,`thrown`],[`understand`,`understood`,`understood`],[`wear`,`wore`,`worn`],[`win`,`won`,`won`],[`write`,`wrote`,`written`],[`wake`,`woke`,`woken`]] };
+
+/* ---------- state ---------- */
+const LS='opic214';
+let state={learned:[],mode:'reveal',theme:'light',lastDay:null};
+try{const s=JSON.parse(localStorage.getItem(LS));if(s)state={...state,...s};}catch(e){}
+const learned=new Set(state.learned);
+function save(){state.learned=[...learned];localStorage.setItem(LS,JSON.stringify(state));}
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cues=s=>esc(s).replace(/\/{1,2}/g,m=>`<span class="cue">${m}</span>`);
+function hexSVG(fill){return `<svg viewBox="0 0 52 58" fill="none" aria-hidden="true"><path d="M26 1.5l22 12.7v25.6L26 56.5 4 39.8V14.2z" fill="${fill?'var(--honey)':'var(--honey-wash)'}" stroke="${fill?'var(--honey-deep)':'var(--honey-line)'}" stroke-width="1.6" stroke-linejoin="round"/></svg>`;}
+const dropIcon=on=>`<svg class="drop" viewBox="0 0 24 24" fill="${on?'var(--good)':'none'}" stroke="${on?'var(--good)':'currentColor'}" stroke-width="2" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 01-12 0c0-4.6 6-11 6-11z"/>${on?'<path d="M9 13.5l2 2 3.5-3.8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>':''}</svg>`;
+const coreCount=d=>d.s.length;
+function go(h){location.hash=h;}
+function scrollTop(){window.scrollTo(0,0);}
+
+/* ---------- theme ---------- */
+function applyTheme(){document.documentElement.setAttribute('data-theme',state.theme);
+  $('#themeBtn').innerHTML=state.theme==='dark'
+    ?`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>`
+    :`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 7 7 0 1020 14.5z"/></svg>`;}
+function toggleTheme(){state.theme=state.theme==='dark'?'light':'dark';save();applyTheme();}
+
+/* ---------- render engine ---------- */
+function render(){
+  const h=location.hash||'#/';
+  const m=h.match(/^#\/day\/(\d+)/);
+  if(m)renderDay(+m[1]);
+  else if(h.startsWith('#/verbs'))renderVerbs();
+  else if(h.startsWith('#/bonus'))renderBonus();
+  else renderHome();
+}
+
+function renderHome(){
+  const lastD=state.lastDay&&DATA.days.find(d=>d.n===state.lastDay);
+  let html=`<div class="view"><section class="hero">
+    <div class="hero-eyebrow">100% REAL · 티파니 오픽</div>
+    <h1>시간 날 때마다,<br>한 문장씩 꿀처럼.</h1>
+    <p>16일 커리큘럼에 담은 오픽 핵심문장 214개. 한글을 보고 영어를 떠올린 뒤 정답을 확인하세요.</p>
+  </section>`;
+
+  if(lastD){
+    html+=`<button class="resume" onclick="go('#/day/${lastD.n}')">
+      <span class="rz-hex"><svg width="42" height="47" viewBox="0 0 52 58"><path d="M26 1.5l22 12.7v25.6L26 56.5 4 39.8V14.2z" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.5)" stroke-width="1.6"/><text x="26" y="34" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">${lastD.n}</text></svg></span>
+      <span class="rz-t"><span class="k">이어서 학습하기</span><span class="n">Day ${lastD.n} · ${esc(lastD.theme)}</span></span>
+      <span class="rz-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></span>
+    </button>`;}
+
+  html+=`<div class="sec"><h2>16일 커리큘럼</h2><span class="rule"></span></div><div class="daylist">`;
+  for(const d of DATA.days){
+    const cc=coreCount(d);
+    html+=`<button class="daycard" onclick="go('#/day/${d.n}')">
+      <span class="hex">${hexSVG(false)}<span class="dn">${d.n}</span></span>
+      <span class="dc-body"><span class="th">${esc(d.theme)}</span>
+        <span class="tags">${d.topics.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</span>
+        <span class="dc-meta">${cc?`<span class="warm">핵심문장 ${cc}개</span>`:`<span class="warm">워밍업 · 쓰기 연습 ${d.p.length}</span>`}</span>
+      </span>
+    </button>`;
+  }
+  html+=`</div>`;
+
+  html+=`<div class="sec"><h2>부록</h2><span class="rule"></span></div><div class="daylist">
+    <button class="daycard" onclick="go('#/bonus')">
+      <span class="hex">${hexSVG(false)}<span class="dn" style="font-size:15px">＋</span></span>
+      <span class="dc-body"><span class="th">기타 유용한 문장</span>
+        <span class="tags"><span class="tag">독서</span><span class="tag">SNS</span><span class="tag">수업</span></span>
+        <span class="dc-meta"><span class="warm">보너스 문장 ${DATA.bonus.length}개</span></span></span>
+    </button>
+    <button class="daycard" onclick="go('#/verbs')">
+      <span class="hex">${hexSVG(false)}<span class="dn" style="font-size:15px">動</span></span>
+      <span class="dc-body"><span class="th">불규칙 동사 변화표</span>
+        <span class="tags"><span class="tag">원형</span><span class="tag">과거</span><span class="tag">과거분사</span></span>
+        <span class="dc-meta"><span class="warm">핵심 동사 ${DATA.verbs.length}개</span></span></span>
+    </button></div>`;
+
+  html+=`<footer>New 혼티오 홀수달 문장집 · <b>오픽 핵심문장 214</b><br>종로YBM e4u 어학원 · 티파니 오픽<br>결국 점수를 만드는 것은 암기가 아니라 '대화'입니다.</footer></div>`;
+  $('#app').innerHTML=html;scrollTop();
+}
+
+function renderDay(n){
+  const d=DATA.days.find(x=>x.n===n);if(!d){go('#/');return;}
+  state.lastDay=n;save();
+  const cc=coreCount(d), hide=state.mode==='hide';
+  let html=`<div class="view"><section class="dhead">
+    <button class="backbtn" onclick="go('#/')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>전체 커리큘럼</button>
+    <div class="dhead-row"><span class="hex">${hexSVG(false)}<span class="dn">${d.n}</span></span>
+      <div><h1>${esc(d.theme)}</h1><div class="dsub">DAY ${d.n} · ${cc?`핵심문장 ${cc}개`:`쓰기 연습 ${d.p.length}개`}</div></div></div>`;
+  if(cc){html+=`<div class="seg" role="group" aria-label="학습 모드">
+      <button aria-pressed="${!hide}" onclick="setMode('reveal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>전체 보기</button>
+      <button aria-pressed="${hide}" onclick="setMode('hide')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7c2 0 3.7.6 5.2 1.5M22 12s-3.5 7-10 7c-2 0-3.8-.6-5.3-1.6"/><path d="M4 4l16 16"/></svg>정답 가리기</button>
+    </div>`;}
+  html+=`</section>`;
+
+  if(cc){html+=`<div class="slist">`;
+    for(const [num,kr,en] of d.s){const isL=learned.has(num);
+      html+=`<div class="scard${isL?' learned':''}${hide?' hide':''}" id="s${num}">
+        <div class="s-top"><span class="s-num">#${num}</span><span class="s-spacer"></span>
+          <button class="droptog" onclick="toggleLearned(${num},this)">${dropIcon(isL)}${isL?'외웠어요':'외우기'}</button></div>
+        <div class="s-kr">${esc(kr)}</div>
+        <div class="s-en" onclick="revealCard(this)"><span class="txt">${esc(en)}</span><span class="peek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>탭하여 정답 보기</span></div>
+      </div>`;}
+    html+=`</div>`;}
+
+  if(d.p&&d.p.length){html+=`<details class="practice"${cc?'':' open'}>
+    <summary><span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></span>Writing Practice<span class="cnt tnum">${d.p.length}</span><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+    <div class="plist">`;
+    for(const [q,a] of d.p){html+=`<div class="pitem hidden" onclick="this.classList.toggle('on')">
+      <div class="pq">${cues(q)}</div>
+      <div class="pa"><span class="ar">→</span><span class="en"><span class="txt">${esc(a)}</span></span></div></div>`;}
+    html+=`</div></details>`;}
+  html+=`</div>`;
+  $('#app').innerHTML=html;scrollTop();
+  if(window._flash){const el=$('#s'+window._flash);if(el){el.scrollIntoView({block:'center'});el.classList.add('flash');}window._flash=null;}
+}
+
+function renderBonus(){
+  let html=`<div class="view"><section class="dhead">
+    <button class="backbtn" onclick="go('#/')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>전체 커리큘럼</button>
+    <div class="dhead-row"><span class="hex">${hexSVG(false)}<span class="dn" style="font-size:18px">＋</span></span>
+      <div><h1>기타 유용한 문장</h1><div class="dsub">부록 · 보너스 ${DATA.bonus.length}개</div></div></div>
+    <div class="seg" role="group" aria-label="학습 모드">
+      <button aria-pressed="${state.mode!=='hide'}" onclick="setMode('reveal')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>전체 보기</button>
+      <button aria-pressed="${state.mode==='hide'}" onclick="setMode('hide')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7c2 0 3.7.6 5.2 1.5M22 12s-3.5 7-10 7c-2 0-3.8-.6-5.3-1.6"/><path d="M4 4l16 16"/></svg>정답 가리기</button>
+    </div></section><div class="slist">`;
+  const hide=state.mode==='hide';
+  DATA.bonus.forEach(([kr,en],i)=>{html+=`<div class="scard${hide?' hide':''}">
+    <div class="s-top"><span class="s-num p">보너스 ${i+1}</span></div>
+    <div class="s-kr">${esc(kr)}</div>
+    <div class="s-en" onclick="revealCard(this)"><span class="txt">${esc(en)}</span><span class="peek"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>탭하여 정답 보기</span></div></div>`;});
+  html+=`</div></div>`;$('#app').innerHTML=html;scrollTop();
+}
+
+function renderVerbs(){
+  let rows='';for(const [b,p,pp] of DATA.verbs){const same=b===p&&p===pp;
+    rows+=`<tr${same?' class="same"':''}><td>${b}</td><td>${p}</td><td>${pp}</td></tr>`;}
+  $('#app').innerHTML=`<div class="view"><section class="dhead">
+    <button class="backbtn" onclick="go('#/')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>전체 커리큘럼</button>
+    <div class="dhead-row"><span class="hex">${hexSVG(false)}<span class="dn" style="font-size:17px">動</span></span>
+      <div><h1>불규칙 동사 변화표</h1><div class="dsub">부록 · 원형–과거–과거분사 ${DATA.verbs.length}개</div></div></div></section>
+    <div class="vtable-wrap"><table class="vtable"><thead><tr><th>원형</th><th>과거</th><th>과거분사</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="vnote">주황색으로 표시된 동사는 원형·과거·과거분사가 모두 같은 형태입니다.</p></div>`;scrollTop();
+}
+
+/* ---------- interactions ---------- */
+function toggleLearned(num,btn){
+  const card=btn.closest('.scard');
+  if(learned.has(num)){learned.delete(num);card.classList.remove('learned');btn.innerHTML=dropIcon(false)+'외우기';}
+  else{learned.add(num);card.classList.add('learned');btn.innerHTML=dropIcon(true)+'외웠어요';btn.classList.add('pop');setTimeout(()=>btn.classList.remove('pop'),400);}
+  save();
+}
+function revealCard(elm){const c=elm.closest('.scard');if(c.classList.contains('hide'))c.classList.toggle('revealed');}
+function setMode(mode){state.mode=mode;save();render();}
+
+/* ---------- search ---------- */
+let INDEX=null;
+function buildIndex(){INDEX=[];for(const d of DATA.days){for(const [num,kr,en] of d.s)INDEX.push({t:`#${num}`,day:d.n,label:`Day ${d.n} · ${d.theme}`,kr,en,num});
+    d.p.forEach(([q,a],i)=>INDEX.push({t:`쓰기 ${i+1}`,day:d.n,label:`Day ${d.n} · Writing`,kr:q.replace(/\//g,' '),en:a,num:null}));}
+  DATA.bonus.forEach(([kr,en],i)=>INDEX.push({t:`보너스 ${i+1}`,day:'bonus',label:`부록 · 기타 문장`,kr,en,num:null}));}
+function openSearch(){$('#search').classList.add('open');$('#searchInp').focus();if(!INDEX)buildIndex();}
+function closeSearch(){$('#search').classList.remove('open');$('#searchInp').value='';$('#searchRes').innerHTML='';}
+function hl(text,q){const i=text.toLowerCase().indexOf(q.toLowerCase());if(i<0)return esc(text);
+  return esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+q.length))+'</mark>'+esc(text.slice(i+q.length));}
+function runSearch(q){q=q.trim();const box=$('#searchRes');
+  if(q.length<1){box.innerHTML='';return;}
+  const res=INDEX.filter(x=>x.kr.toLowerCase().includes(q.toLowerCase())||x.en.toLowerCase().includes(q.toLowerCase())).slice(0,50);
+  if(!res.length){box.innerHTML=`<div class="sr-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>"${esc(q)}"에 대한 결과가 없어요</div>`;return;}
+  box.innerHTML=res.map(x=>`<button class="sr-item" onclick="jump('${x.day}',${x.num})">
+    <div class="meta">${esc(x.label)} · ${esc(x.t)}</div>
+    <div class="kr">${hl(x.kr,q)}</div><div class="en">${hl(x.en,q)}</div></button>`).join('');
+}
+function jump(day,num){closeSearch();if(num)window._flash=num;go(day==='bonus'?'#/bonus':'#/day/'+day);}
+
+/* ---------- boot ---------- */
+window.addEventListener('hashchange',render);
+applyTheme();render();
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch();});
+</script>
