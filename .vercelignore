@@ -1,0 +1,12 @@
+# 런타임에 쓰이지 않는 파일 — 배포 산출물에서 제외 (소스 노출 방지 + 빌드 크기 절감)
+opic-sentence-book.pre-audio.bak.html
+
+# TTS 생성 파이프라인 (빌드 타임 전용)
+gen_tts.py
+build_data.js
+serve.py
+audio/sentences.json
+audio/raw/
+audio/opt/
+
+.claude/
